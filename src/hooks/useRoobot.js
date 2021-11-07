@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getRoobotsThunks } from "../redux/thunks/roobotsThunks";
 
 const useRoobots = () => {
-  const roobots = useSelector((store) => store.roobots);
+  const roobots = useSelector(({ roobots }) => roobots);
   const dispatch = useDispatch();
 
   const getRoobots = useCallback(() => {
-    dispatch(getRoobotsThunks);
+    dispatch(getRoobotsThunks());
   }, [dispatch]);
 
-  return { getRoobots, roobots };
+  return { roobots, getRoobots };
 };
 
 export default useRoobots;
