@@ -1,14 +1,22 @@
-const CardRoobot = () => {
+const CardRoobot = ({ roobot }) => {
   return (
     <section className="containerCard">
       <div className="cardRoobot">
-        <h2 className="cardRoobot__name">Bender</h2>
-        <img src="" alt="imagenRoobot" className="cardRoobot__img" />
+        <h2 className="cardRoobot__name">{roobot.name}</h2>
+        <img
+          src={roobot.imageSource}
+          alt="imagenRoobot"
+          className="cardRoobot__img"
+        />
         <div className="cardRoobot__features">
-          <p className="cardRoobot__features-speed">Speed: 5</p>
-          <p className="cardRoobot__features-endurance">Endurance: 5</p>
+          <p className="cardRoobot__features-speed">
+            Speed: {roobot.features.speed}
+          </p>
+          <p className="cardRoobot__features-endurance">
+            Endurance: {roobot.features.endurance}
+          </p>
           <p className="cardRoobot__features-creationDate">
-            Creation Date: 3000
+            Creation Date: {roobot.features.creationData}
           </p>
         </div>
       </div>
