@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import CardRoobot from "./components/CardRoobot";
+import CardRoobot from "./components/cardRoobot";
 
 import useRoobots from "./hooks/useRoobot";
 
