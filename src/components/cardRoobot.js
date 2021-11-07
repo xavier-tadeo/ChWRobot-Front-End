@@ -16,7 +16,7 @@ const CardRoobot = ({ roobot }) => {
             Endurance: {roobot.features.endurance}
           </p>
           <p className="cardRoobot__features-creationDate">
-            Creation Date: {roobot.features.creationData}
+            Creation Date: {roobot.features.creationDate}
           </p>
         </div>
       </div>
