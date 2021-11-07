@@ -25,7 +25,8 @@ yarn-error.log*
 
 # environment key
 .env
-
+# sonarcube files
+.scannerwork
 
 # sonarscanner
 .sonar-project.properties
