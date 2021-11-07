@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import CardRoobot from "./cardRoobot";
+import CardRoobot from "./CardRoobot";
 
 describe("Given a componet CardRoobot", () => {
   describe("When it receives robot", () => {
