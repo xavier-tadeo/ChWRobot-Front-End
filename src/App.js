@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
-// import CardRoobot from "./components/cardRoobot";
-import CardRoobot from "./components/CardRoobot";
+import CardRoobot from "./components/cardRoobot";
+// import CardRoobot from "./components/CardRoobot";
 import Form from "./components/Form";
 import useRoobots from "./hooks/useRoobot";
 
