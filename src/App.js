@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Form from "./components/Form";
 import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import PageCard from "./pages/PageCard";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <div className="container">
         <Router>
           <Routes>
+            <Route path="/" element={<LoginPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/pageCard" element={<PageCard />} />
             <Route path="/form" element={<Form />} />
