@@ -1,27 +1,20 @@
-import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import CardRoobot from "./components/cardRoobot";
-// import CardRoobot from "./components/CardRoobot";
 import Form from "./components/Form";
-import useRoobots from "./hooks/useRoobot";
+import HomePage from "./pages/HomePage";
+import PageCard from "./pages/PageCard";
 
 function App() {
-  const { roobots, getRoobots } = useRoobots();
-
-  useEffect(() => {
-    getRoobots();
-  }, [getRoobots]);
-
   return (
     <div className="App">
-      <h1>Here they are all Roobots</h1>
-      <div className="formRoobots">
-        <Form />
-      </div>
-      <div className="containerRoobots">
-        {roobots.map((roobot) => (
-          <CardRoobot key={roobot._id} roobot={roobot} />
-        ))}
+      <div className="container">
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/pageCard" element={<PageCard />} />
+            <Route path="/form" element={<Form />} />
+          </Routes>
+        </Router>
       </div>
     </div>
   );

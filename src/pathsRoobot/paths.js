@@ -1,5 +1,7 @@
 const paths = {
-  get: "/",
+  homePage: "/",
+  pageCard: "/pageCard",
+  form: "/form",
 };
 
 export default paths;
