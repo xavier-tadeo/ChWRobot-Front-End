@@ -11,8 +11,16 @@ function App() {
       <div className="container">
         <Router>
           <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <HomePage />
+                  <LoginPage />
+                </>
+              }
+            />
+
             <Route path="/pageCard" element={<PageCard />} />
             <Route path="/form" element={<Form />} />
           </Routes>

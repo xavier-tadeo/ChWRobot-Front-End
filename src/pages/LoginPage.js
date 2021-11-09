@@ -9,18 +9,13 @@ const LoginPage = () => {
     []
   );
 
-  // const initialData = {
-  //   username: "",
-  //   password: "",
-  // };
-
   const [userData, setUserData] = useState(initialData);
   const [isDisabled, setIsDisabled] = useState(true);
 
   const onChange = (event) => {
     setUserData({
       ...userData,
-      [event.target.value]: event.target.id,
+      [event.target.id]: event.target.value,
     });
   };
 
