@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import useRoobots from "../hooks/useRoobot";
 
 const LoginPage = () => {
   const initialData = useMemo(
@@ -8,6 +9,8 @@ const LoginPage = () => {
     }),
     []
   );
+
+  const { postUser } = useRoobots();
 
   const [userData, setUserData] = useState(initialData);
   const [isDisabled, setIsDisabled] = useState(true);
@@ -23,7 +26,11 @@ const LoginPage = () => {
     setIsDisabled(userData.username === "" || userData.password === "");
   }, [userData]);
 
-  const handlerSubmit = (evt) => evt.preventDefault();
+  const handlerSubmit = (evt) => {
+    evt.preventDefault();
+    postUser(userData);
+    setUserData(initialData);
+  };
 
   return (
     <form

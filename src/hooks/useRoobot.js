@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getRoobotsThunks } from "../redux/thunks/roobotsThunks";
+import { getRoobotsThunks, postUserThunk } from "../redux/thunks/roobotsThunks";
 
 const useRoobots = () => {
   const roobots = useSelector(({ roobots }) => roobots);
@@ -10,7 +10,11 @@ const useRoobots = () => {
     dispatch(getRoobotsThunks());
   }, [dispatch]);
 
-  return { roobots, getRoobots };
+  const postUser = (user) => {
+    dispatch(postUserThunk(user));
+  };
+
+  return { roobots, getRoobots, postUser };
 };
 
 export default useRoobots;

@@ -5,7 +5,7 @@ import { getRoobotsAction, postUserAction } from "../actions/actionCreators";
 const apiUrl = process.env.REACT_APP_URL;
 
 export const getRoobotsThunks = () => async (dispatch) => {
-  const roobots = await axios.get(apiUrl);
+  const roobots = await axios.get(`${apiUrl}robots`);
 
   dispatch(getRoobotsAction(roobots.data));
 };
