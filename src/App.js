@@ -10,16 +10,9 @@ function App() {
     <div className="App">
       <div className="container">
         <Router>
+          <HomePage />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <HomePage />
-                  <LoginPage />
-                </>
-              }
-            />
+            <Route path="/" element={<LoginPage />} />
 
             <Route path="/pageCard" element={<PageCard />} />
             <Route path="/form" element={<Form />} />
