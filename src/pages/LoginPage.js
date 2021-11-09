@@ -9,11 +9,6 @@ const LoginPage = () => {
     []
   );
 
-  // const initialData = {
-  //   username: "",
-  //   password: "",
-  // };
-
   const [userData, setUserData] = useState(initialData);
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -68,7 +63,6 @@ const LoginPage = () => {
       >
         Login
       </button>
-      <pre>{JSON.stringify(userData, null, 2)}</pre>
     </form>
   );
 };
