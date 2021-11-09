@@ -20,7 +20,7 @@ const LoginPage = () => {
   const onChange = (event) => {
     setUserData({
       ...userData,
-      [event.target.value]: event.target.id,
+      [event.target.id]: event.target.value,
     });
   };
 
@@ -68,6 +68,7 @@ const LoginPage = () => {
       >
         Login
       </button>
+      <pre>{JSON.stringify(userData, null, 2)}</pre>
     </form>
   );
 };
